@@ -1,0 +1,40 @@
+1、 css隐藏元素的方法
+	display:none;
+	visibility:hidden;
+	opacity:0;
+	overflow:hidden
+2、字符串、数字、布尔、数组、对象、Null、Undefined
+   String,Number,Boolean,Array,Object,Null,Undefined
+3、
+	typeof可以输出是五种，
+	String,Number,Boolean,Object,Undefined
+4、在数组原有方法基础之上添加新的方法，trim,功能是去掉数组内各元素的左右两边空格
+	Array.prototype.trim=function(){
+				/*console.log(...this)*/
+				for(let i=0;i<this.length;i++){
+					/*加这句就可以覆盖原字符串*/
+					this[i]=this[i].trim()
+				}
+			}
+5、字符串反向输出(数组有reverse,字符串没有）
+	str.split(“”).reverse().join()
+6、js两个定时器
+	setInterval setTimeout
+7、面向对象三大特性：
+	封装 继承  多态
+8、position的属性值：
+	static 默认
+	relative
+	absolute
+	fixed
+	inherit
+9、1/0 Infinite无穷大
+10、100层楼，1层有珠宝
+			arr=[]
+			for(let i=1;i<=100;i++){
+				arr.push(i)
+			}
+			for(let i=0;i<=arr.length;i++){
+				var m=Math.floor(Math.random()*arr.length)
+				console.log(arr.splice(m,1)[0])
+			}
