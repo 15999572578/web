@@ -1,0 +1,58 @@
+ jquery mobile如何做布局
+	移动端:九宫格  列表
+	移动端加上一句话：
+	<meta name=‘viewport’ content=‘width=device-width,initial-scale=1.0’>
+	声明：
+	<div data-role="page">这就是一个移动端的页面
+	<div data-role="header">这就是移动端页面的标题
+	<div data-role="content">这就是移动端页面的内容 
+	<div data-role="footer">这就是移动端页面的底部	
+	提供样本色：data-theme=“a”
+	data-role=“nabber”导航 
+	data-position:定位fixed
+	 class="ui-grid-a”表示一行内两个元素
+	 class=“ui-grid-b”表示一行三个元素
+	 class=“ui-block-a”遇到class就换行
+	data-role=“listview”实现了jquery mobile列表
+	data-role=“button”表明是一个按钮
+	按钮组：
+	data-role=“controlgroup”
+	data-type="horizontal”水平方向 vertical竖直方向
+ajax通用格式
+$.ajax({
+	url:’’,
+	type:’post‘，
+	dataType:’json’,
+	success:function(res){},
+	error:function(res){}
+})
+ajax简写的post方式
+$.post(‘地址’，{参数},function(res){})
+请求地址：http://192.168.5.49:3000/songs
+	post传参:验证参数:verify:1
+动态加载的列表元素，jquery mobile需要刷新
+	$(“列表“).listview(‘refresh’)
+H5增加了audio/video（音频/视频）
+controls显示出音频的播放控制
+audio用$符号来取的时候，它是object类型，取0
+jquery里面有一个触发器的发法：trigger,可以触发音频和视频
+play()是音频的播放
+pause()是音频的暂停
+muted是音频的静音属性
+volume音量，1-0之间
+jquery mobile原理：
+	第一个页面把head里面js,css都在内存中。进入第二个页面，默认从内存加载，不从页面中加载。
+页面中如果有你需要另外添加的代码的时候：处理
+	1、把<script></script>放在<div data-role=“page”里面
+	2、做链接到本页面的时候，在链接上加data-ajax=false
+延伸：
+1、播放条
+H5  <input type=“range”>
+2、第二个ajax
+	http://192.168.5.49:3000/playsongs
+	post请求
+	传参：
+		id:需要你原来请求的地址中的song_id
+	歌曲的地址
+		aa.mp3
+		http://192.168.5.49:3000/music/aa.mp3
