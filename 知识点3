@@ -1,0 +1,21 @@
+1、数组和伪数组
+伪数组就是只读的数组，数组的方法不能使用在伪数组上的。
+getElementsByTagName
+getElementsByClassName
+2、截取字符串
+	substring substr slice
+3、统计字符串中a的个数 
+	str.split(‘a’).length-1
+4、ajax异步的局部刷新
+5、举例说明js的多态
+	new Array()
+	new Array(5)
+	new Array(5,2,7)
+	new Lunbo(a.png,b.png,c.png)
+6、$是query的缩写
+7、前端解决跨域的技术：jsonp
+8、	表单提交的两种方式：
+	get 明文 不安全 有大小限制
+	post 暗文  安全  无大小限制
+9、地址栏的信息：location.href
+10、从分工协作、易维护、编程思路上去谈
