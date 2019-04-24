@@ -1,0 +1,57 @@
+页面间传递数据：
+1、地址栏传送
+2、存储方式传送
+3、后端返回
+ajax嵌套：
+	ajax形成多层嵌套，可读性下降
+	promise对未来发生事情的一种预判，是一个容器。解决于ajax的嵌套
+	promise只有一个失败
+	promise阻塞线程的
+	setTimeout setInterval Promise
+	js机制：
+		它是一个单线程，阻塞线程的有setTimeout setInterval Promise，以主线程为主，阻塞线程采用异步处理，对于setTimeout setInterval Promise三个阻 塞事件，promise认为小事件，setTimeout,setInteval认为大事件，js会先处理小事件，再处理大事件
+相同时间：队列顺序 FIFO
+		  栈		FILO
+实际：js会把阻塞线程的事件放到队列中
+事件：
+	$(“p”).click(function(){
+	})
+	论坛：回复和点赞
+		添加论坛回复条目后回复的按钮需不需要再添加动作
+	on方法添加事件
+	第一种方法：
+	on(‘click’,function(){
+	});
+	第二种写法（动态添加元素事件）
+	on(‘click’,元素,function(){
+	});
+	
+	bind跟on第一种一样
+	delegate跟on第二种一样
+区别：事件是否能够作用到动态添加的元素上
+jquery动画：
+	animate
+	格式：
+	animate({属性：属性值}，动画时间，function(){
+		动画结束的动作
+	});
+	css的属性（常见属性：宽、高、透明度等常见）
+js高级内容：
+	add(1,2)
+	add(1)(2)(3)(4)
+	函数柯里化
+	add(1)(2)
+	理解过程：
+		add本身是一个函数，可以接收参数()
+		add(1)再理解成一个函数,继承可以接参数()
+		add(1)(2) add函数 add（1）函数
+		一个指令里出现两个函数，就相当于返回函数
+		add(1)(2)写法 
+		function add(a){
+			return function(b){
+				return a+b;
+			}
+		}
+	理解成两句话：
+		1、只接收一个参数
+		2、返回函数
