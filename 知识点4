@@ -4,12 +4,14 @@
 2、css画圆的方法：
 	圆的大小指定width,height，border-radius:50%
 3、js数组去重
+        let arr = [1,2,3,4,2,1,69,3,4,1]
 	arr1=[]
 	for(var i=0;i<arr.length;i++）{
-		if(arr1.indexOf(arr[i])){
+		if(-1 == arr1.indexOf(arr[i])){
 			arr1.push(arr[i])
 		}
 	}
+	console.log(arr1)
 4、什么是同步？
 	自上而下执行，后一句代码的执行要等到前一句代码的执行结束
 5、query加载jsonp的格式
@@ -47,4 +49,4 @@
 9、jquery加载ajax方法有哪些？
 	$.ajax $.post $.get
 10、0.1+0.2_____0.3比较大小?为什么？
-		0.1+0.2>0.3  双精度问题
+		0.1+0.2>0.3  双精度问题0.1+0.2=0.3000000004
