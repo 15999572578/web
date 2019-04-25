@@ -1,0 +1,40 @@
+1、CSS引入方式：
+	(1)行内式：<a style=“”/>
+	(2)内嵌式：<style></style>
+	(3)外链式：<link rel=‘stylesheet’ href=‘’>
+	(4)导入式：<import @>
+2、判断一个对象是不是另一个对象的子类：instanceOf()
+3、什么是优雅降级，什么是渐近增强？
+	这是写css的一种思路和方法
+	优雅降级一般先兼容高级浏览器，再兼容低级浏览器
+	渐进增强一般先写公共的代码部分，再写特殊的代码部分
+4、比较两个数组中第一个不同元素的下标
+	（两个数组长度不一定相等）
+	arr1length=arr1.length
+	arr2length=arr2.length
+	length=arr1length>arr2length?arr1length:arr2length;
+  let arr =[]
+  //var str=arr1.join(“”)
+	for(var i=0;i<arr2.length;i++){
+		if (arr1.indexOf(arr2)==-1){
+			arr.push(i)
+		}
+	}
+  console.log(arr[0])
+5、产生7-18之间的随机整数
+	Math.floor(Math.random()*12+7)
+6、js内置对象：
+	Date String Array Math Number 
+	Document Location Window Navigator Object
+7、定时器的区别
+	setInterval 执行多次
+	setTimeout 执行一次
+8、query获取html元素的属性 
+	attr
+9、阻止冒泡
+	stopPropagation()
+10、
+	1、ajax嵌套会使代码的可读性降低，同时也会把请求时间加长(Promise)
+	2、ajax使页面元素动态加载，不利于使用seo技术，（seo搜索引挚优化）（页面静态化）
+	3、ajax需要与网络进行交互，取决于当前网络状态。
+		（缓存）
