@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+			凤凰社
+		</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+			#header{
+				margin-top:30px;
+				margin-bottom:30px;
+			}
+			.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+				color: white;
+				background-color: red;
+				border: none;
+				border-bottom:2px solid green;
+			}
+			#nav{
+				margin-bottom:30px;
+			}
+			.badge {
+    
+				background-color: red;
+			   
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container" id="header">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<img src="images/logo.png"/>
+			</div>
+			<div class="col-xs-12 col-sm-offset-2 col-sm-4 col-md-offset-2 col-md-4 col-lg-offset-2 col-lg-4">
+				 <div class="input-group">
+					  <input type="text" class="form-control"/>
+					  <span class="input-group-btn">
+						<button class="btn btn-warning" type="button">搜索</button>
+					  </span>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="nav">
+			<div class="col-xs-12">
+				<ul class="nav nav-tabs">
+				  <li class="active"><a href="#">首页</a></li>
+				  <li role="presentation" class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+					 真实婚礼<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" role="menu">
+					  <li><a href="#">后院婚礼</a></li>
+					  <li><a href="#">农场婚礼</a></li>
+					  <li class="divider"></li>
+					  
+					  <li><a href="#">复古婚礼</a></li>
+					</ul>
+				  </li>
+				  <li><a href="#">活动</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="container">
+			<div class="col-xs-12 col-sm-6">
+				<!--轮播开始-->
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- 指示器-->
+				  <ol class="carousel-indicators">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+					<div class="item active">
+					  <img src="images/1.jpg">
+					  <div class="carousel-caption">
+						这是第一个图片
+					  </div>
+					</div>
+					<div class="item">
+					  <img src="images/2.jpg">
+					  <div class="carousel-caption">
+						这是第二个图片 
+					  </div>
+					</div>
+					<div class="item">
+					  <img src="images/3.jpg">
+					  <div class="carousel-caption">
+						这是第三个图片 
+					  </div>
+					</div>
+				  </div>
+
+				  <!-- 左右两边箭头-->
+				  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" ></span>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				  </a>
+				</div>
+			<!--轮播结束-->
+			<h3>内容块的标题一</h3>
+			<!-- data-toggle='toolitip'表明是一个工具提示，data-placement表示的是方向 title要显示的信息-->
+			<a href="#" id="mytool" data-toggle="tooltip" data-placement="left" title="王皓"><img src="images/avatar.jpg" class="img-circle"/></a>
+			<span>2018-02-03</span>
+			<span>农场婚礼</span>
+			<div class="btn-group pull-right" role="group">
+				<!-- data-toggle='popover'表明是一个弹出框， data-placement弹出框的方向 data-content显示的内容 title题目-->
+			  <button id="btn1" type="button" class="btn btn-default" data-toggle="popover" data-placement="top" data-content="这是一场婚礼" title="婚礼"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></button>
+			
+			<!-- data-toggle='modal'调用模态框 data-target='#id名'调用的模态框div的id名-->
+			  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></button>
+			</div>
+			</div>
+			<div class="modal fade" id="myModal">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					  <!--关闭模态框，加上一句 data-dismiss="modal"  &times就是关闭模态框的X-->
+					<button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">我的模态框</h4>
+				  </div>
+				  <div class="modal-body">
+					<p>这是我自己的模态框</p>
+					<img src="images/1.jpg" class="img-responsive"/>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn btn-primary">保存</button>
+				  </div>
+				</div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				  <ul class="pager">
+					<li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+					<li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+				  </ul>
+				  <ol class="breadcrumb">
+					  <li><a href="#">Home</a></li>
+					  <li><a href="#">Library</a></li>
+					  <li class="active">Data</li>
+				  </ol>
+				  <div>
+						 <span class="badge">4</span>
+				  </div>
+			</div>
+		</div>
+		<script>
+			$(function () {
+				$('#mytool').tooltip()
+				$("#btn1").popover()
+			})
+		</script>
+	</body>
+</html>
