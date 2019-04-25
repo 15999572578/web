@@ -1,0 +1,62 @@
+bootstrap
+响应式（移动端 pc端）
+技术特点：1、移动设备优先
+<meta name="viewport" content="width=device-width, initial-scale=1">
+2、媒体查询：
+@media (min-width:760px) { ... }
+设备分成：手机  平板 电脑
+bootstrap掌握两点：
+	1、栅格系统，一行12列
+	2、栅格参数分为4种设备
+		xs  超小  老手机
+		sm  小    手机
+		md  中    iPad
+		lg  大    电脑
+bootstrap:
+缺点：解决不了上下边距
+bootstrap:
+	居中类： container
+	偏移量：col-xs-offset-2
+	两个基本html元素放一起的样式，叫组件	
+	按钮的色彩和对应的类的信息：
+	btn-default 灰色
+	btn-primary 蓝色  正常状态
+	btn-success 绿色	成功
+	btn-info浅蓝
+	btn-warning 橙色 警告色
+	btn-danger  红色 危险操作
+	涉及导航，列表，当前激活的选项统一active
+	bootstrap浮动
+	pull-left左浮 pull-right右浮
+	图片响应类img-responsive
+	路径导航（面包屑)
+总结：
+	1、组件：
+		 输入框组
+		 按钮组
+		 导航条
+		 分页
+		 徽章
+		 路径导航（面包屑）
+	2、插件：
+		Carousel
+		工具提示：tooltip
+		弹出框 ：popover
+		模态框 ：modal
+	3、bootstrap布局记住的几个点
+		1、一行12列
+		2、四种设备的缩写：xs sm md lg
+		3、几个主要的类：
+			居中：container
+			偏移:col-xs-offset-数字
+			浮动: pull-left pull-right
+			按钮：btn-primary btn-success 
+				btn-warning btn-danger
+			图片响应：img-reponsive
+			激活：active
+	4、有两个技术做储备： 移动设备优先 
+						媒体查询 
+						 @media(min-width:px){
+							css样式
+						}
+	5、bootstrap是一个栅格系统
