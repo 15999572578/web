@@ -1,0 +1,48 @@
+登录注册
+	1、注册接口
+		http:192.168.4.233:3000/users/register
+		提供的数据：post请求
+			username 
+			password
+			email
+	2、登陆接口
+		http://192.168.4.233:3000/users/login  post请求
+			username
+			password
+	3、验证用户唯一性接口 post请求
+		http://192.168.4.233:3000/users/checkuser
+			username
+	4、验证码接口
+		http://192.168.4.233:3000/capt
+	5、验证码数字接口
+		http://192.168.4.233:3000/captnum
+			get请求
+	h5input表单中
+		type=“email”邮箱
+		1、为每一个input元素取name名字
+			form action=“提交的地址“
+			method提交的方式(全局刷新）
+			得到结果实际是后台返回的数据，实现页面跳转这种方式是不能实现的。
+			如果后台实现了页面的跳转，可以直接在form表单中去写
+			jquery serialize()替代全页面刷新
+			serialize()使用必须给form表单取id
+			作用把表单中的数据取出来用&连结
+			serialize()作用实现局部刷新
+			serializeArray()可以把参数分解成数组，有可能被前端使用
+		2、注册的简单逻辑：
+			（1）验证码
+				后台返给前台验证码，可以写cookie
+				点击换验证码，点击时注意页面是否被访问。
+				如果需要变换，加参数，时间戳，getTime()
+				需要在验证码地址结尾加上new Date().getTime()
+				验证码数字接口：jsonp访问
+				实现验证
+			(2)密码和确认密码的比较
+				serializeArray()
+			（3）注册相关信息必须输入
+					required表示信息必须输入
+				(4)checkbox协议框必须选中
+				（5)检测用户名是否可以注册
+					提供了一个接口
+				(6)判断邮箱合法性
+					indexOf
