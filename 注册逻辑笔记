@@ -46,3 +46,73 @@
 					提供了一个接口
 				(6)判断邮箱合法性
 					indexOf
+h5表单元素 novalidate不进行任何约束条件的检验
+	required 必需的
+h4表单元素：
+		type=text文本框 
+		type=password密码框 
+		type=radio单选框 
+		type=checkbox复选框 
+		select下拉
+		textarea多行文本框
+		type=button普通按钮
+		type=submit提交按钮
+		type=reset重置 
+		type=hidden隐藏域
+H5增加的表单元素：
+		滑块：<input type=“range”		
+		邮箱 ：email
+		网址：url
+		颜色框 ：type=“color”
+		文件框 ：type=“file”
+		数字框：type=“number”
+		日期： type=“date”
+		月： type=“month”
+		星期：type=“week”
+		日期时间：type=“datetime”
+		所有的input都有一个事件：change
+	<select>下拉列表加multiple多选
+头像
+	form分为全局刷新和局部刷新
+		图片上传地址：http://192.168.4.233:3000/uploadimg post
+		type=file的name固定为imgfile
+		上传文件，form表单中必须有
+		enctype=“multipart/form-data”
+		H5文件读取
+			FileReader读文本读utf8的文本
+			readAsText读文本文件
+			readAsDataURL读路径
+			事件：unload
+		ajax局部刷新上传图片
+			数据被formdata携带
+			var formdata=new FormData()
+			formdata.append(“键”，值）
+			调用ajax时
+				processData
+				contentType
+				cache三个键的值全部为false
+登陆：
+	http://192.168.4.233:3000/users/login
+		username
+		password
+	登陆在每个模块都需要信息的验证
+	登陆成功把信息记录在localStorage里面 
+		靠h5存储技术
+			sessionStorage存储用户登陆状态
+		登出需要把sessionStorage里面存储的信息删除
+			removeItem()删除指定的键值 
+			clearItem()全部删除
+	1、基本功能完成
+	2、各个页面需要用户验证，这需要localStorage,sessionStorage记录信息，一般情况记录user的名字
+	3、登出的时候需要把记录的信息去除掉
+	4、注册一个主机，登陆一个主机，提供的地址不一样。（读写分离）
+	5、csrf攻击
+		防csrf攻击：1、前台的提交地址找不到
+						2、密码和确认密码前台后台都要进行
+						3、验证码前后台都要审核 
+						4、<type=“hidden” value=“随机字符串“ cookie sessionStorage存一个值secret
+		提交比较sessionStorage和hidden串值相不相等。不对拒绝提交。
+		盗链
+	http://192.168.4.233:3000/goodslist
+	商品列表
+	http://192.168.4.233:3000/fenlei
