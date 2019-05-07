@@ -1,0 +1,28 @@
+商品列表
+	html5判断网络是否在线
+		navigator.onLine
+	html5判断地理定位
+		navigator.geolocation.getCurrentPosition()
+获取你的地理定位
+navigator.geolocation.watchPosition()
+随时获取你的地理定位
+		百度地图
+		高德地图
+jquery
+	html方法指两标签间html代码
+JSON
+	stringily把数据转成JSON字符串
+	parse把字符串转成JSON数据
+filter过滤	
+	把符合条件的元素留下，不符合的去除
+	map把符合条件元素留下，不符合返回undefined
+商品列表功能：
+	1、正常加载
+	2、价格排序/库存/点击率	（排序，数值类的数据）	
+		sort
+	3、过滤需要的商品:（分类方面的数据，过滤）
+		filter,map
+		1、根据我的购买需求，商品价格来找我的商品
+		2、找“好吃” 模糊查找
+	4、搜索
+		
