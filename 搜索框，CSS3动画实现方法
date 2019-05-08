@@ -1,0 +1,48 @@
+列表中的搜索框是datalist
+html5提供的datalist
+	可以定义成文本框的数据列表
+	<input type="text" list='list1'/>
+	定义一个datalist标签
+	<datalist id="list1">
+			在fatalist标签中有option选项，option的value值就是搜索框的商品名称，option标签中间的文本就是商品数量的提示
+			<option value='车库'>共有11100商品</option>
+		
+		</datalist>
+css3动画
+	transition
+	transition:2s all linear;
+	第一个参数是时间
+	第二个参数是哪个属性动画
+	第三个参数linear线性补间
+	以倍数的放大：
+		transform:translate  rotate  scale skew
+		transform后面的位置偏移等内容用空格隔开
+	opacity
+	css3多背景
+		background:url()，url(),url()
+	逐帧动画
+	keyframe
+	前缀：-webkit 谷歌浏览器
+		  -ms  ie浏览器
+		  -moz  火狐
+			-o   Opera浏览器
+	定义一个@keyframe  名字
+	在对应元素的css属性上加 animation:名字 2s linear infinite;
+	linear线性补间
+	infinite循环
+	css3线性渐变：
+		background-image
+			linear-gradient线性渐变
+			radius-gradient径向渐变
+css3多背景添加顺序，
+	被覆盖的背景是放在最后面的
+linear线性，如果不需要线性，step直接到位
+animation指令只能写一个，需要两个动画同时，把两个animation后面的指令用逗号隔开
+transform
+animation
+共同地方：效果可以叠加，但两个命令都不能写多遍，
+不同：叠加， transition 空格隔开
+			 animation逗号隔开
+	 transition执行一次，不能自动加载，必须事件趋动
+	 animation可以执行多次，可以自动加载
+结合动画的命令方式做轮播，丰富产品列表
