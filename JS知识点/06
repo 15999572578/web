@@ -1,0 +1,45 @@
+1.组织默认时间的发生：e.prevertDefault()
+2.http的三种状态：
+    200成功
+    404 没有页面
+    302 跳转
+3.数组中大于30的输出
+    arr.filter(function(item{
+      if(item>30){
+      return item
+      }
+     })
+   console.log(item)
+4.用JS写闭包
+  01.for(let i=0;i<btns.length;i++){
+     btns[i].onclick=function(){
+        alert(i)
+     }
+  }
+  02.function f(ss){
+            let a = ss;
+            function inner(){
+                a++
+                return a
+            }
+            return inner
+        }
+       let nn = f(10)
+        console.log(nn())
+        console.log(nn())
+        console.log(nn())
+5.用js写函数柯力化
+    function(a){
+       return function(b){
+         return a+b
+         }
+      }
+6.3个子元素选择器
+   first-child last-child nth-child
+7.伪数组转数组
+   Array.prototype.slice.call(伪数组）
+8原生JS创建一个元素
+creatElement()
+9.获得焦点 失去焦点
+    onblur onfocus
+10.表单的元素 type ="" text radios date color.....
