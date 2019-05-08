@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body{
+				background:black;
+			}
+			#bk{
+				height:312px;
+				width:880px;
+				animation:move_bk 5s linear infinite;
+			}
+			@keyframes move_bk{
+				from{
+					background:url(img/hill-with-windmill.png) repeat-x 0 0,url(img/hill2.png) repeat-x 0 150px,url(img/cloud.png) 0 0,url(img/sky1.png) repeat-x 0 0;
+				}
+				to{
+					background:url(img/hill-with-windmill.png) repeat-x 700px 0,url(img/hill2.png) repeat-x 500px 150px,url(img/cloud.png) 300px 0,url(img/sky1.png) repeat-x 40px 0;
+				}
+			}
+			#bird{
+				width:180px;
+				height:123px;
+				background:url(img/bird-forward-back.png) no-repeat;
+				animation:fly 0.5s steps(1) infinite,moves 10s linear infinite;
+			}
+			@keyframes fly{
+				0%{
+					background-position:0 0
+				}
+				33%{
+					background-position:-180px 0;
+				}
+				66%{
+					background-position:-360px 0;
+				}
+				100%{
+					background-position:0 0;
+				}
+			}
+			@keyframes moves{
+				0%{
+					transform:translate(0px,0px)
+				}
+				50%{
+					transform:translate(400px,300px)
+				}
+				100%{
+					transform:translate(800px,0px)
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="bk">
+			<div id="bird">
+			</div>
+		</div>
+	</body>
+</html>
