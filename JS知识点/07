@@ -1,7 +1,10 @@
 1.CSS：层叠样式表
-2.function f(){
-  return math.max.apply(this,arguments)
-  }
+2.用JS写一个函数 参数未定 输出所有参数里的最大值参数
+    function f(){
+       let num = Math.max.apply(this,arguments)
+       return num
+    }
+    console.log(f(1,2,3,88,63,21))
 3.bootstrap中四种设备的表示
   xs sm md  lg
 4.h5判断网络是否在线
