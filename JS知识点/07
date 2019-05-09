@@ -1,0 +1,24 @@
+1.CSS：层叠样式表
+2.function f(){
+  return math.max.apply(this,arguments)
+  }
+3.bootstrap中四种设备的表示
+  xs sm md  lg
+4.h5判断网络是否在线
+  navigatior.online
+5.地址栏实现页面交互
+  1.location.href获取地址栏
+  2.用？分隔
+  3.用&分割字符串成数组
+  4.讲数组中的元素用=分隔，第一个元素是键，第二个元素是键值
+6.本地存储用什么指令清楚键值
+   removeItem
+7.用jquery选择器选择img标签src包含jpg的标签
+   $("img[src*='jpg']")
+8.absulate和relative的区别
+   absulate 绝对定位 脱离文档流 参照的是父级
+   relative 相对定位 不脱离文档流
+9.什么是同源策略
+  同协议 同Ip 同端口
+10.CSS动画的集中方式
+  transition  animation
