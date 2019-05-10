@@ -1,0 +1,67 @@
+定位问题：
+	navigator.geolocation
+百度地图二次开发：
+	先引入<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.2"></script> 1.2免费
+	使用：
+		var map = new BMap.Map("map");
+		引号中map就是div的id值
+		注意：div一定要设宽和高，不然显示不出来
+	map.centerAndZoom("深圳");
+	centerAndZoom后面的参数可以直接输字符串
+	换乘的api
+		公交换乘：transiteRoute
+		自驾导航：drivingRoute
+		步行导航 ：walkingRoute
+svg
+	canvas 画的像素图 画图只能代码写
+	svg画的矢量图  可以用标签写
+ 		rect画矩形 x y起始坐标
+		<image xlink:href="earth.gif"></image>
+		xlink:href指向图片的地址
+		circle画圆 圆心cx cy 半径r
+		defs定义一些将来用到的一些元素，定义时取id
+		用到这个元素时用use xlink:href=“id值”
+		路径 path 取id 画路径d=“M点 L线，A弧“
+		animateMotion来定义动画
+html5语义化标签
+		header头部
+		nav导航 
+		footer尾部
+		menu菜单	
+		main内容
+		section区块
+		article文章
+		aside边栏
+	高级浏览器自己定义的标签与h5的标签差一个display:block
+	低级浏览器自己随意写的标签名不认。document.createElement(“myelement”)
+html5异步解决单线程的问题
+	html5特定的方法阻塞线程，如果自己定义的function代码量很大，执行时间长，html5当中多线程方法。（类似于ajax)
+	Worker
+		实例化一个worker类，相当于给异步的worker指派异步的任务，实例时带参数,参数就是一个任务的js文件
+		主线程监控的是worker的onmessage事件，当有消息传送回来的时候，通知主线程收取获取的信息。信息在e.data中
+		在指定事件中解发一个发送指令的任务，就是让另一个线程的代码运行，运行结束有消息返回就被onmessage接收。
+		worker.postMessage
+		异步处理任务的js里面也要onmessage接收处理事件的指令，处理完之后也要把postMessage信息返回
+		H5 FileReader读的文件大，你就可以去让h5多线程去做。
+			防止用户上传大的文件，前端用多线程去判断大小，大不让用户上传
+		ajax
+			原生ajax需要兼容。
+			ie ActiveXObject
+			非ie XMLHttpRequest(缩写XHR）
+			xhr.open('GET','http://localhost:3000/index.html',true)
+			get指请求的方式
+			中间是地址		
+			true表示的异步
+		原生方法四步
+			1、new XMLHttpRequest()
+			2、new的对象open
+			3、new的对象send()
+			4、接收对象在onreadystatechange事件里，数据在responseText里面
+	var xhr=new XMLHttpRequest()
+	xhr.open('GET','http://localhost:3000/index.html',true)
+	xhr.send()
+	xhr.onreadystatechange=function(){
+		if (xhr.readyState==4 && xhr.status==200){
+			xhr.responseText
+		}
+	}
